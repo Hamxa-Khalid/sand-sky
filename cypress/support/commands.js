@@ -32,3 +32,5 @@ Cypress.Commands.add('signupCMD', () => {
     .contains('Log out')
     .should('have.text', 'Log out');
 });
+
+Cypress.Commands.add('loginCMD', () => {});
