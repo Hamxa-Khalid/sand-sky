@@ -6,5 +6,7 @@ describe('Log In To Sand Sky', function () {
     });
   });
 
-  //   it('Login Sky Sand', function () {});
+  it('Login Sky Sand', function () {
+    cy.loginCMD(this.data.creds.email, this.data.creds.password);
+  });
 });
