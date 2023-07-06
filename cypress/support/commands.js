@@ -6,6 +6,11 @@ import { faker } from '@faker-js/faker';
 const signUpSandSkyObj = new signUpSandSky();
 const logInSandSkyObj = new loginSandSky();
 
+Cypress.Commands.add('closeEmailPopupCMD', () => {
+  cy.url().should('include', '/');
+  cy.get('button[title="Close Modal"]').first().click();
+});
+
 Cypress.Commands.add('signupCMD', () => {
   cy.url().should('include', '/');
   signUpSandSkyObj.getEmailSignupCloseButton().first().click();
