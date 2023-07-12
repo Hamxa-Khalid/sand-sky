@@ -55,3 +55,5 @@ Cypress.Commands.add('loginCMD', (email, password) => {
     .type(password);
   logInSandSkyObj.getLoginUserButton().contains('Log In').click();
 });
+
+Cypress.Commands.add('CheckoutCMD', () => {});
