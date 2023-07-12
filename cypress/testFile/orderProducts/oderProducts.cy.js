@@ -42,13 +42,13 @@ describe('Add Products To Cart & Checkout', function () {
       .getClearingFaceMaskAddToCartButton()
       .contains('Add to cart')
       .click();
-    orderProductsObj.getHeaderCartDrawer().click();
+    orderProductsObj.getHeaderCartDrawer().click({ force: true });
     cy.url().should('contains', '/products/oil-control-clearing-face-mask');
-    // orderProductsObj.getCartPromoCodeInputTextBox().contains('Promo Code');
     orderProductsObj.getCartDrawerQuantityInput().type('3');
     orderProductsObj
       .getSecureCheckoutButton()
       .contains('Secure Checkout')
       .click();
+    cy.CheckoutCMD();
   });
 });
